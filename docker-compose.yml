@@ -1,0 +1,26 @@
+
+version: '3'
+services:
+  gateway:
+    build: .
+    ports:
+      - "8080:5000"
+    depends_on:
+      - triangle
+      - square
+      - circle
+
+  triangle:
+    build: ./triangleService
+    ports:
+      - "5100:5001"
+
+  square:
+    build: ./squareService
+    ports:
+      - "5101:5002"
+
+  circle:
+    build: ./circleService
+    ports:
+      - "5102:5003"
