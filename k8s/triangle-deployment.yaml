@@ -23,7 +23,7 @@ spec:
       containers:
         - image: triangle
           name: triangle
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Never
           ports:
             - containerPort: 5001
               protocol: TCP
